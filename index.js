@@ -4,6 +4,8 @@ const fs = require('fs')
 // web server
 const app = express()
 
+const port = process.env.PORT || 3001
+
 app.use(express.json())
 
 // create the text file with timestamp-------------post rquest---------------------
@@ -53,7 +55,7 @@ function getReq() {
   })
 }
 
-app.listen(3001, () => {
+app.listen(port, () => {
   console.log('web server started')
   postReq()
   getReq()
