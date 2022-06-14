@@ -13,6 +13,11 @@ const port = process.env.PORT || 3001
 
 app.use(express.json())
 
+// homepage
+app.get('/', (req, res) => {
+  res.send("Append URL with '/getfile' to get response")
+})
+
 // create the text file with timestamp-------------post rquest---------------------
 function postReq() {
   app.post('/createfile', (req, res) => {
