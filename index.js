@@ -1,5 +1,10 @@
 const express = require('express')
+
 const fs = require('fs')
+
+const dotenv = require('dotenv')
+
+dotenv.config()
 
 // web server
 const app = express()
@@ -56,7 +61,7 @@ function getReq() {
 }
 
 app.listen(port, () => {
-  console.log('web server started')
+  console.log(`web server started in the port ${process.env.PORT}.`)
   postReq()
   getReq()
 })
