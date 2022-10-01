@@ -86,4 +86,3 @@ app.listen(port, () => {
 // 13.06.2022--21.56.43.txt content is: 1655137603902
 // 13062022--192820.txt content is: 1655128700433
 // Export the Express API
-module.exports = app;
